@@ -1,0 +1,149 @@
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 900;
+    font-size: 800%;
+    contain: content;
+    margin-top: 0%;
+    text-shadow: 3px 3px 1px black
+
+}
+
+body {
+    background-image: url("https://fondosmil.com/fondo/7687.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(9px);
+    width: 100%;
+    margin-bottom: 100%;
+    padding: 0%;
+
+}
+p {
+    color: rgb(236, 233, 233);
+    font-weight: 700;
+    text-shadow: 3px 3px 1px rgb(41, 40, 40);
+    font-size: 90%;
+
+}
+
+.caja {
+    background:rgb(0, 0, 0);
+}
+
+h2{
+    color: rgb(255, 255, 255 );
+    text-align: center;
+    font-weight: 900;
+    font-size: 300%;
+    contain: content;
+    margin-top: 0%;
+    text-shadow: 3px 3px 1px black
+}
+.menu{
+    background-color: rgba(255, 255, 255, 0.336);
+    font-stretch: expanded ;
+    text-size-adjust: 100%;
+    text-decoration: none;
+
+}
+
+h3{
+    color: rgb(255, 255, 255 );
+    text-align: center;
+    font-weight: 900;
+    font-size: 300%;
+    contain: content;
+    margin-top: 0%;
+    text-shadow: 3px 3px 1px black}
+
+.menu{
+    text-decoration-color: aquamarine;
+    text-align: center;
+    font-weight: 500;
+    font-size: 180%;
+    contain: content;
+    margin-top: 0%;
+
+
+
+
+}
+
+.contacto{
+    background-color: rgba(243, 243, 243, 0.5);
+    line-height: 12px;
+    color:rgb(0, 0, 0) ;
+    margin-right: 80%;
+    font-weight: 900;
+    font-size: 110%;
+    margin: 0 auto;
+    width: 30rem;
+    padding: 2rem;
+    border-radius: 7rem;
+    text-align: center;
+
+
+
+
+}
+
+a:hover {
+    font-size: 100%;
+    color:rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.938);
+
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.938);}
+
+
+a{
+    text-decoration: none;
+    color: rgb(255, 247, 247);
+}
+
+.productos{
+    background-color: rgba(31, 30, 30, 0.904);
+    text-align: center;
+    width: 20rem;
+    height: 40rem;
+}
+.cproduct{
+    align-content: center;
+    display: flex;
+}
+
+
+#button{
+    width: 4rem;
+    background-color: rgb(99, 99, 99);
+    border-radius: 1rem;
+    color: aliceblue;
+}
+
+#button2{
+    width: 4rem;
+    background-color: rgb(99, 99, 99);
+    border-radius: 1rem;
+    color: aliceblue;
+}
+.separador{
+    size: 3rem;
+    width: 1%;
+
+
+
+
+}
+button{
+    width: 6rem;
+    background-color: rgb(99, 99, 99);
+    border-radius: 1rem;
+    color: aliceblue;
+
+}
+.card-body{
+    background-color: rgba(214, 176, 208, 0.123);
+}
+
