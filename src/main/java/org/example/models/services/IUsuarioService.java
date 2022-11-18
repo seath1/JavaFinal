@@ -4,7 +4,7 @@ import org.example.models.entities.Usuario;
 import java.util.List;
 import java.util.Optional;
 
-public interface IUsuarioServices {
+public interface IUsuarioService {
 
 
     public void create(Usuario usuario);

@@ -3,19 +3,21 @@ package org.example.models.services;
 import org.example.models.entities.Contacto;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface IContactoServices {
 
     public void create (Contacto contacto);
 
-    void delete(Integer idContacto);
+    void delete(Long idContacto);
 
-    List<Contacto> readAll();
+    public List<Contacto> readAll();
 
+
+    Optional<Contacto> readOne(Long idContacto);
 
     void update(Contacto contacto);
 
-    Contacto readOne(int id);
-}
+    }
 
 

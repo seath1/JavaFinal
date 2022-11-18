@@ -1,7 +1,7 @@
 package org.example.controller;
 
 import org.example.models.entities.Usuario;
-import org.example.models.services.UsuarioServicesImpl;
+import org.example.models.services.UsuarioServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,14 +18,14 @@ import java.util.Optional;
 public class UsuarioController {
 
     @Autowired
-    private UsuarioServicesImpl usuarioService;
+    private UsuarioServiceImpl usuarioService;
 
     @RequestMapping(value = ("/lista"), method = RequestMethod.GET)
     public ModelAndView mostrarUsuarios(){
         ModelAndView model = new ModelAndView();
         List<Usuario> usuarios = usuarioService.readAll();
         model.addObject("usuarios", usuarios);
-        model.setViewName("usuarios");
+        model.setViewName("ListaUsuario");
         return model;
     }
 

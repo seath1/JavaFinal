@@ -9,16 +9,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html>
 
 <%@include file="head.jsp"%>
 <body>
-<h1>Lista de Contacto</h1>
-<br/>
-<br/>
 <div id="backgroundList">
+    <%@include file="menu.jsp" %>
     <div class="container-fluid">
-        <%@include file="menu.jsp" %>
+
         <table class="table table-dark">
             <thead>
             <tr>
@@ -26,25 +25,27 @@
                 <th scope="col">Nombre_contacto</th>
                 <th scope="col">Email_Contacto</th>
                 <th scope="col">Mensaje_Contacto</th>
-                <th scope="col">Opcion</th>
+                <th scope="col">Actualizar</th>
+                <th scope="col">Eliminar</th>
             </tr>
             </thead>
             <tbody>
             <c:forEach var="contactos" items="${contactos}">
 
                 <tr>
-                    <td><c:out value="${contactos.getIdContacto()}"/></td>
-                    <td><c:out value="${contactos.getNombreContacto()}"/></td>
-                    <td><c:out value="${contactos.getEmailContacto()}"/></td>
-                    <td><c:out value="${contactos.getMensajeContacto()}"/></td>
+                    <td>${contactos.idContacto}</td>
+                    <td>${contactos.nombreContacto}</td>
+                    <td>${contactos.emailContacto}</td>
+                    <td>${contactos.mensajeContacto}</td>
 
                     <td>
-                        <form class="col-md-1" action="EliminarContacto" method="post">
-                            <button title="eliminar" type="submit" class="btn btn-danger"
-                                    name="id" value="${contactos.getIdContacto()}">
-                                Eliminar Contacto
-                            </button>
-                        </form>
+                        <spring:url value="/contacto/actualizar/${contactos.idContacto}" var="actualizarURL"/>
+                        <a class="btn btn-info" href="${actualizarURL}" role="button">Editar</a>
+                    </td>
+                    <td>
+                        <spring:url value="/contacto/eliminar/${contactos.idContacto}" var="eliminarURL"/>
+                        <a class="btn btn-info" href="${eliminarURL}" role="button"> Eliminar Contacto</a>
+
                     </td>
                 </tr>
             </c:forEach>

@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UsuarioServicesImpl implements IUsuarioServices{
+public class UsuarioServiceImpl implements IUsuarioService {
 
     @Autowired
     IUsuarioRepository usuarioRepository;

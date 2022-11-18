@@ -14,7 +14,9 @@ public class Usuario {
 
     @Column(name = "fecha_nacimiento")
     protected String fechaNacimiento;
+    @Column(name = "run")
     protected Integer run;
+    @Column(name = "tipo")
     protected String tipo;
 
     public Usuario(){}

@@ -2,6 +2,7 @@ package org.example.controller;
 
 import org.example.models.entities.Contacto;
 import org.example.models.services.ContactoServicesImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ import java.util.Optional;
 @RequestMapping("/contacto")
 public class ContactoController {
 
+    @Autowired
     private ContactoServicesImpl contactoServices;
 
     @RequestMapping(path = "/ver", method = RequestMethod.GET)
@@ -27,8 +29,8 @@ public class ContactoController {
     public ModelAndView mostrarContactos(){
         ModelAndView model = new ModelAndView();
         List<Contacto> contactos = contactoServices.readAll();
-        model.addObject("contacto", contactos);
-        model.setViewName("contacto");
+        model.addObject("contactos", contactos);
+        model.setViewName("ListaContacto");
         return model;
     }
 
@@ -36,22 +38,22 @@ public class ContactoController {
     public ModelAndView agregarContactos(){
         ModelAndView model = new ModelAndView();
         Contacto contacto = new Contacto();
-        model.addObject("contacto", contacto );
-        model.setViewName("crearContacto");
+        model.addObject("contactoForm", contacto );
+        model.setViewName("contacto");
         return model;
     }
 
-    @RequestMapping(value = "/actualizar", method =  RequestMethod.GET)
+    @RequestMapping(value = "/actualizar/{id}", method =  RequestMethod.GET)
     public ModelAndView actualizarContacto(@PathVariable Long id){
         ModelAndView model = new ModelAndView();
         Optional<Contacto> contacto = contactoServices.readOne(id);
-        model.addObject("contacto", contacto);
-        model.setViewName("crearUsuario");
+        model.addObject("contactoForm", contacto);
+        model.setViewName("contacto");
         return model;
     }
 
     @RequestMapping(value = "/guardar", method = RequestMethod.POST)
-    public ModelAndView guardarEditarContacto(@ModelAttribute("contacto") Contacto contacto){
+    public ModelAndView guardarEditarContacto(@ModelAttribute("contactoForm") Contacto contacto){
         if(contacto.getIdContacto() != null){
             contactoServices.update(contacto);
         } else {
@@ -61,7 +63,7 @@ public class ContactoController {
     }
 
     @RequestMapping(value = "/eliminar/{id}", method = RequestMethod.GET)
-    public ModelAndView eliminaContacto(@PathVariable("id") Long id){
+    public ModelAndView eliminarContacto(@PathVariable("id") Long id){
         contactoServices.delete(id);
         return new ModelAndView(("redirect:/contacto/lista"));
     }

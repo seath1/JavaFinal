@@ -9,7 +9,7 @@
 <html>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(10, 10, 10, 0.747)">
-        <a class="navbar-brand" href="${pageContext.request.contextPath}/index">Christian Muñoz</a>
+        <a class="navbar-brand" href="${pageContext.request.contextPath}/">AOTROLEVEL</a>
         <button
                 class="navbar-toggler"
                 type="button"
@@ -25,7 +25,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/index"
+                    <a class="nav-link" href="${pageContext.request.contextPath}/"
                     >Inicio<span class="sr-only">(current)</span></a
                     >
                 </li>
@@ -35,16 +35,37 @@
                 <li class="nav-item dropdown">
                     <a
                             class="nav-link dropdown-toggle"
-                            href="#"
+                            href="${pageContext.request.contextPath}/contacto/agregar"
                             role="button"
                             data-toggle="dropdown"
                             aria-expanded="false"
                     >
-                        Proyecto
+                        Contacto
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="${pageContext.request.contextPath}/contacto/ver">Contacto</a>
-                        <a class="dropdown-item" href=${pageContext.request.contextPath}/listacontacto/ver">Lista de Contacto</a>
+                        <a class="dropdown-item" href="${pageContext.request.contextPath}/contacto/agregar">Contacto</a>
+                        <a class="dropdown-item" href="${pageContext.request.contextPath}/contacto/lista">Lista de Contacto</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a
+                            class="nav-link dropdown-toggle"
+                            href=""
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-expanded="false"
+                    >
+                        Usuarios
+                    </a>
+                    <div class="dropdown-menu">
+                        <sec:authorize access="hasAnyAuthority('ADMIN')">
+                            <a class="dropdown-item" href="${pageContext.request.contextPath}/usuario/agregar">Registrar Usuario</a>
+                        </sec:authorize>
+                        <a class="dropdown-item" href="${pageContext.request.contextPath}/usuario/lista">Ver Usuarios</a>
+                        <sec:authorize access="!isAuthenticated()">
+                            <a class="dropdown-item" href="${pageContext.request.contextPath}/logout">Cerrar Sesión</a>
+                        </sec:authorize>
                     </div>
                 </li>
 

@@ -15,4 +15,18 @@ public class IndexController {
     public ModelAndView mostrarIndex() {
         return new ModelAndView("index");
     }
+
+    @RequestMapping(value = ("/login"), method = RequestMethod.GET)
+    public ModelAndView mostrarLogin(){
+        return new ModelAndView("login");
+    }
+
+    @RequestMapping(value = ("/logout"))
+    public ModelAndView logout(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if(authentication != null){
+            SecurityContextHolder.getContext().setAuthentication(null);
+        }
+        return new ModelAndView("redirect:/login?logout");
+    }
 }
