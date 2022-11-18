@@ -44,7 +44,7 @@
                     </td>
                     <td>
                         <spring:url value="/producto/eliminar/${productos.idProducto}" var="eliminarURL"/>
-                        <a class="btn btn-info" href="${eliminarURL}" role="button"> Eliminar Contacto</a>
+                        <a class="btn btn-info" href="${eliminarURL}" role="button"> Eliminar </a>
 
                     </td>
                 </tr>

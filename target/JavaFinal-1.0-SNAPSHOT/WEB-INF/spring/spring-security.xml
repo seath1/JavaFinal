@@ -9,7 +9,13 @@
 
     <http auto-config="true">
         <intercept-url pattern="/" access="permitAll()"/>
-        <intercept-url pattern="/usuario/" access="hasAnyAuthority('ADMIN')"/>
+        <intercept-url pattern="/contacto/lista" access="hasAnyAuthority('ADMIN')"/>
+        <intercept-url pattern="/usuario/agregar" access="hasAnyAuthority('ADMIN')"/>
+        <intercept-url pattern="/usuario/lista" access="hasAnyAuthority('ADMIN')"/>
+        <intercept-url pattern="/producto/agregar" access="hasAnyAuthority('ADMIN')"/>
+        <intercept-url pattern="/producto/actualizar/{id}" access="hasAnyAuthority('ADMIN')"/>
+        <intercept-url pattern="/producto/eliminar/{id}" access="hasAnyAuthority('ADMIN')"/>
+        <intercept-url pattern="/producto/lista" access="hasAnyAuthority('CLIENTE','ADMIN')"/>
 
         <form-login login-page="/login" authentication-failure-url="/"
                     username-parameter="username" password-parameter="password"/>

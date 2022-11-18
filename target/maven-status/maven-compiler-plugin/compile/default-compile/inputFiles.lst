@@ -3,9 +3,9 @@ C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\s
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\services\IProductoServices.java
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\controller\TiendaController.java
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\entities\Producto.java
+C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\services\UsuarioServiceImpl.java
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\entities\Usuario.java
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\repositories\IClienteRepository.java
-C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\services\UsuarioServicesImpl.java
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\controller\ContactoController.java
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\services\IClienteServices.java
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\repositories\IUsuarioRepository.java
@@ -13,7 +13,7 @@ C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\controll
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\repositories\IProductoRepository.java
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\services\IContactoServices.java
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\services\ContactoServicesImpl.java
-C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\services\IUsuarioServices.java
+C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\services\IUsuarioService.java
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\entities\Cliente.java
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\models\services\ClienteServicesImpl.java
 C:\Users\Golden Gamers\IdeaProjects\JavaFinal\src\main\java\org\example\controller\ProductoController.java

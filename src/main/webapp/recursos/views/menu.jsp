@@ -44,7 +44,9 @@
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="${pageContext.request.contextPath}/contacto/agregar">Contacto</a>
+                        <sec:authorize access="!isAuthenticated()">
                         <a class="dropdown-item" href="${pageContext.request.contextPath}/contacto/lista">Lista de Contacto</a>
+                        </sec:authorize>
                     </div>
                 </li>
 
@@ -82,10 +84,15 @@
                         <sec:authorize access="hasAnyAuthority('ADMIN')">
                             <a class="dropdown-item" href="${pageContext.request.contextPath}/producto/agregar">Registrar Producto</a>
                         </sec:authorize>
-                        <sec:authorize access="!isAuthenticated()">
+                        <sec:authorize access="hasAnyAuthority('ADMIN' , 'CLIENTE')">
                         <a class="dropdown-item" href="${pageContext.request.contextPath}/producto/lista">Ver Productos</a>
                         </sec:authorize>
                     </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/logout"
+                    >Logout<span class="sr-only">(current)</span></a
+                    >
                 </li>
 
             </ul>

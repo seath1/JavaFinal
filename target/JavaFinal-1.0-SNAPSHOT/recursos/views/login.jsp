@@ -15,12 +15,12 @@
 <div    class="container row col-12 justify-content-center" >
   <form action="login" method="post">
     <div class="form-group">
-      <label for="exampleInputEmail1">Correo Electronico</label>
-      <input type="text" name="usuario" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <label for="exampleInputEmail1">Usuario</label>
+      <input type="text" name= "username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">Contraseña</label>
-      <input type="password" name="clave" class="form-control" id="exampleInputPassword1">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1">
     </div>
 
     <button type="submit" class="btn btn-primary">Enviar</button>
