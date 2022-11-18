@@ -62,9 +62,28 @@
                         <sec:authorize access="hasAnyAuthority('ADMIN')">
                             <a class="dropdown-item" href="${pageContext.request.contextPath}/usuario/agregar">Registrar Usuario</a>
                         </sec:authorize>
-                        <a class="dropdown-item" href="${pageContext.request.contextPath}/usuario/lista">Ver Usuarios</a>
                         <sec:authorize access="!isAuthenticated()">
-                            <a class="dropdown-item" href="${pageContext.request.contextPath}/logout">Cerrar Sesión</a>
+                        <a class="dropdown-item" href="${pageContext.request.contextPath}/usuario/lista">Ver Usuarios</a>
+                        </sec:authorize>
+                    </div>
+
+                    </li>
+                    <li class="nav-item dropdown">
+
+                    <a
+                            class="nav-link dropdown-toggle"
+                            href=""
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-expanded="false"
+                    >Productos</a>
+
+                    <div class="dropdown-menu">
+                        <sec:authorize access="hasAnyAuthority('ADMIN')">
+                            <a class="dropdown-item" href="${pageContext.request.contextPath}/producto/agregar">Registrar Producto</a>
+                        </sec:authorize>
+                        <sec:authorize access="!isAuthenticated()">
+                        <a class="dropdown-item" href="${pageContext.request.contextPath}/producto/lista">Ver Productos</a>
                         </sec:authorize>
                     </div>
                 </li>

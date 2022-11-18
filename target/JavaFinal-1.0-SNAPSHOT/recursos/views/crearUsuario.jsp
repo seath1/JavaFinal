@@ -11,7 +11,8 @@
 <html>
 <head>
   <%@include file="head.jsp"%>
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 <body>
 <%@include file="menu.jsp" %>
@@ -38,7 +39,7 @@
         <label for="tipo">Tipo</label>
         <form:select path="tipo" cssClass="custom-select" id="tipo">
           <option selected disabled value="">Seleccione...</option>
-          <option>Cliente</option>
+          <option>Usuario</option>
           <option>Admin</option>
 
         </form:select>
