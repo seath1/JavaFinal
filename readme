@@ -1,0 +1,5 @@
+Proyecto Final de Java implementando Spring Framework , se trata de una pagina web destinada a la venta de ropa
+al por mayor donde se cuenta con un formulario de contacto a todo publico ,y restringido mediante spring secutity
+el acceso a precios de productos o en el caso del admin al CRUD completo de las BD.
+
+Creado por Christian Muñoz 
